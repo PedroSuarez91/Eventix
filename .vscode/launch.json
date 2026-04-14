@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-PedroApplication<pedro>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.suarez.pedro.PedroApplication",
+            "projectName": "pedro",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
