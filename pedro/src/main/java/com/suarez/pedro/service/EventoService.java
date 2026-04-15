@@ -1,11 +1,8 @@
 package com.suarez.pedro.service;
 
 import java.util.List;
-
-//import org.apache.catalina.startup.ClassLoaderFactory.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.suarez.pedro.model.Evento;
 import com.suarez.pedro.repository.EventoRepository;
 
@@ -22,11 +19,19 @@ public class EventoService {
         return EventoRepository.listaEventos();
     }
 
-    public String deleteEvento(String nombre){
-        if(EventoRepository.eliminarEventos(nombre)){
+    public String deleteEvento(int id){
+        if(EventoRepository.eliminarEventos(id)){
             return "Evento eliminado";
         }
         return "No se puede eliminar el evento";
+    }
+
+    public Evento modifEvento(int id, Evento evento){
+        return EventoRepository.modificarEvento(id, evento);
+    }
+
+    public Evento searchById(int id){
+        return EventoRepository.buscarPorId(id);
     }
 }
 
